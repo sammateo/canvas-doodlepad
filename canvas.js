@@ -31,3 +31,28 @@ canvas.addEventListener('mousedown',function(e){
     })
 
 })
+
+
+canvas.addEventListener('touchstart',function(e){
+    check = true;
+    let x = e.offsetX
+    let y = e.offsetY
+    c.moveTo(x,y);
+    canvas.addEventListener('touchmove',function(e){
+        c.strokeStyle = colorPicker.value
+
+        if(!check){
+            return;
+        }
+        let x = e.offsetX
+        let y = e.offsetY
+        c.lineTo(x,y);
+        c.stroke();
+    }) 
+
+    canvas.addEventListener('touchend',function(e){
+        check =false;
+        c.beginPath()
+    })
+
+})
