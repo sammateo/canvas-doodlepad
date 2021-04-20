@@ -35,8 +35,8 @@ canvas.addEventListener('mousedown',function(e){
 
 canvas.addEventListener('touchstart',function(e){
     check = true;
-    let x = e.offsetX
-    let y = e.offsetY
+    let x = e.touches[0].clientX
+    let y = e.touches[0].clientY
     c.moveTo(x,y);
     canvas.addEventListener('touchmove',function(e){
         c.strokeStyle = colorPicker.value
@@ -44,8 +44,8 @@ canvas.addEventListener('touchstart',function(e){
         if(!check){
             return;
         }
-        let x = e.offsetX
-        let y = e.offsetY
+        let x = e.touches[0].clientX
+        let y = e.touches[0].clientY
         c.lineTo(x,y);
         c.stroke();
     }) 
