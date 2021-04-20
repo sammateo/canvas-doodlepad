@@ -10,12 +10,19 @@
     </head>
     <body>
 
-        <canvas></canvas>
-        <div class="colorcontainer">
-            <label for="colorPicker">Color Picker</label>
-            <input type="color" value="#f6f82" id="colorPicker">
-
+        <canvas class="canvas"></canvas>
+        <div class="optioncontainer">
+            <div class="colorcontainer">
+                <label for="colorPicker">Color Picker</label>
+                <input type="color" value="#f6f82" id="colorPicker" class="colorpcicker">
+            </div>
+            
+            <div class="widthcontainer">
+                <label for="colorPicker">Line Width</label>
+                <input type="range" min="1" max="10"value="#f6f82" id="width" class="width">
+            </div>
         </div>
+        
         
         <script src="canvas.js"></script>
     </body>

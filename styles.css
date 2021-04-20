@@ -7,23 +7,35 @@
 /* body{
 } */
 
-canvas{
+.canvas{
     border:2px solid black;
 }
 
-.colorcontainer{
-    width:50%;
+.optioncontainer{
+    display:grid;
+    width:100%;
+    grid-template-columns:1fr 1fr;
+}
+
+.colorcontainer, .widthcontainer{
+    width:200px;
     display:block;
     margin:auto;
     margin-top:50px;
-
+    place-items: center;
 }
 
 .colorcontainer input,
-    .colorcontainer label{
-    /* border:2px solid black; */
+    .colorcontainer label, .widthcontainer input, .widthcontainer label{
     display:block;
     margin:auto;
     margin-bottom: 10px;
     text-align: center;
+}
+
+.colorpcicker{
+    width:100px;
+    border:2px solid black;
+    outline:none;
+    background-color:none;
 }
